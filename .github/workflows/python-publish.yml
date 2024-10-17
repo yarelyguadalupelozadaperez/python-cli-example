@@ -28,7 +28,7 @@ jobs:
         node-version: '20'
 
     - name: Set up Python
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5  # Updated to a newer version
       with:
         python-version: '3.x'
     
@@ -41,7 +41,7 @@ jobs:
       run: python -m build
     
     - name: Publish package
-      uses: pypa/gh-action-pypi-publish@v1.10.3  # Ensure you're using the latest version
+      uses: pypa/gh-action-pypi-publish@v1.0.0  # Replace with the actual latest version
       with:
         user: __token__
         password: ${{ secrets.PYPI_API_TOKEN }}
