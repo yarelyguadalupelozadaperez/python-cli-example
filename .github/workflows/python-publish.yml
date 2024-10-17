@@ -41,7 +41,7 @@ jobs:
       run: python -m build
     
     - name: Publish package
-      uses: pypa/gh-action-pypi-publish@latest  # Ensure you're using the latest version
+      uses: pypa/gh-action-pypi-publish@v1.10.3  # Ensure you're using the latest version
       with:
         user: __token__
         password: ${{ secrets.PYPI_API_TOKEN }}
